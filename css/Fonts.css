@@ -1,0 +1,24 @@
+@font-face {
+    font-family:'Raleway';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../assets/Fonts/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:'vazir';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../assets/Fonts/Vazir.woff);
+}
+@font-face {
+    font-family:'Ghaf';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../assets/Fonts/Digi\ Ghaf\ Bold.ttf);
+}
+body,button{
+    font-family: 'vazir';
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:'Ghaf' ;
+}

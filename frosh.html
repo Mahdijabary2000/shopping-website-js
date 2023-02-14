@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" >
+<head>
+    <meta charset="UTF-8" dir="rtl">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Fonts.css">
+    <link rel="stylesheet" href="./css/glider.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Document</title>
+
+</head>
+<body>
+
+  <nav  >
+    <div class="logo">
+      <img src="./assets/image/pngwing.com.png" alt=""> 
+      
+  </div>
+ 
+    <div class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#" class="nav-link">صفحه اصلی</a></li>
+        <li class="nav-item"><a href="./products.html" class="nav-link">محصولات</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">درباره ما</a></li>
+        <li class="nav-item"><a href="./contact-us.html" class="nav-link">تماس با ما</a></li>
+        
+      </ul>
+    </div>
+      <div class="navbar-icon">
+          <ul class="icon-list">
+            <li class="nav-item  submenu"><a href="#" target="_blank"><img src="./assets/image/shopping.svg" alt=""></a>
+              <div id="shopping-cart">
+                <table id="cart-content"  dir="rtl">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <tr>
+                              <td>
+                                <img src="./assets/image/pexels1.jpg" style="width: 100px; height: 100px;" alt="">
+                                <div>
+                                 <img  src="./assets/image/plus.svg" alt="">
+                                  <input type="number" value="1">
+                                  <img src="./assets/image/dash.svg" alt="">
+                                </div>
+
+                              </td>
+                              <td>
+                                <p style="font-size:20px;">Nike Air Jordan-100</p>
+                                <img src="./assets/image/bagcheck.svg" style="width: 17px;height: 17px;margin-left: 1rem;" alt=""><span style="color: rgb(138, 136, 136);">موجود در انبارفروشگاه</span>
+                                <!-- <p style="font-size:15px;text-align: right;">قرمز<span style="background-color: red;width: 15px;height: 15px;border-radius: 1rem;display: inline-block;"></span></p>  -->
+                                <p style="font-size: 2rem;">2,000,000تومان</p>
+                              </td>
+                              <td>
+                                <a  href='#' data-id='${shoesInfo.id}'><img class='remove' src='./assets/image/remove.svg' style="margin-right: 40px;"/></a>
+                              </td>
+                              
+                            </tr>
+                    </tbody>
+                </table>
+
+                  <div style="display: flex;justify-content: space-between;position: relative;bottom: 0;">
+
+                      <p style="font-size: 18px;">مبلغ قابل پرداخت:</p>
+                      <p class="total-price" style="font-size: 18px;"></p>
+                    
+                      <button style="border: none;"><a href="#" id="clear-cart" >پاک کردن</a></button>
+                  </div>
+
+                
+            </div>
+            </li>
+            <!-- <li class="nav-item  search">
+              <div class="box">
+                <img class="search-icon" src="./assets/image/search (2).svg" alt="">
+                    <input type="text" class="input" name="txt"placeholder='جستجو...' onmouseout="this.value = ''; this.blur();">
+            </div>            
+            </li> -->
+            <li class="nav-item  search">
+              <div id="search" class="fade">
+                <a href="#" class="close-btn" >
+                    <img src="./assets/image/x-whaite.svg" alt="">
+                </a>
+                <input placeholder="type here" id="searchbox" type="search"/>
+            </div>
+                 <a href='#search'>
+                    <img src="./assets/image/search.svg"  alt="">
+                </a>
+            </li>
+
+          </ul>
+      </div>
+    <div class="hamburger">
+      
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+   
+  </nav>
+
+
+  
+  <section class="carsousel ">
+    <div class="shoping"> 
+      <div class="containers" >
+        <div class="slide img-zoom-container">
+
+          <div class="mySlides">
+            <img src="./assets/image/shoes41.png" >
+          </div>
+          <div class="mySlides" >
+            <img src="./assets/image/shoes51.png" >
+          </div>
+          <div class="mySlides">  
+            <img src="./assets/image/shoese2_preview_rev_1.png" >
+          </div>    
+          <div class="mySlides">    
+            <img src="./assets/image/shoes41.png">
+          </div>
+          <div class="mySlides">   
+            <img src="./assets/image/shoes51.png" >
+          </div>    
+          <div class="mySlides">   
+            <img src="./assets/image/shoese2_preview_rev_1.png" >
+          </div>
+        </div>
+              
+          <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a> -->
+        
+          <!-- <div class="caption-container">
+            <p id="caption"></p>
+          </div> -->
+        
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="./assets/image/shoes41.png" style="width:100%" onclick="currentSlide(1)" >
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./assets/image/shoes51.png" style="width:100%" onclick="currentSlide(2)" >
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./assets/image/shoese2_preview_rev_1.png" style="width:100%" onclick="currentSlide(3)" >
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./assets/image/shoes41.png" style="width:100%" onclick="currentSlide(4)" >
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./assets/image/shoes51.png" style="width:100%" onclick="currentSlide(5)" >
+            </div>    
+            <div class="column">
+              <img class="demo cursor" src="./assets/image/shoese2_preview_rev_1.png" style="width:100%" onclick="currentSlide(6)" >
+            </div>
+          </div>
+
+          
+
+  
+      </div>  
+
+
+
+          <div class="select">
+              <h3>Nike Air Jordan-100</h3>
+              <span><img src="./assets/image/bagcheck.svg" style="width: 19px;height: 19px;margin-left: 1rem;" alt=""><span style="color: rgb(138, 136, 136);"></span>موجود در انبارفروشگاه</span>
+              <p>200تومان</p>
+              <!-- <p>رنگ</p>
+              <div class="colors-shose">
+                <div class="color-shoes"></div>
+                <div class="color-shoes"></div>
+                <div class="color-shoes"></div>
+              </div> -->
+              
+              <p class="size-title">انتخاب سایز</p>
+              <div class="sizing">
+                <span class="size">37</span>
+                <span class="size">38</span>
+                <span class="size">39</span>
+                <span class="size">40</span>
+                <span class="size">41</span>
+                <span class="size">42</span>
+                <span class="size">43</span>
+                <span class="size">44</span>
+                <span class="size">45</span>
+                <span class="size">46</span>
+              </div>
+
+
+                <div style="display: flex; justify-content: center;margin-bottom: 2rem;">
+                  <a  class="btn-add"href="#"> add to cart</a>
+                </div>
+
+
+                <button class="accordion">معرفی</button>
+              <div class="panel">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                 چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                  و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد 
+                 کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+              </div> 
+
+                <button class="accordion"> مشخصات</button>
+                <div class="panel">
+                <span>جنس</span> <span>:پارچه</span>
+                  <hr>
+                  <span> جنس زیره </span><span>:پلی اورتون</span>
+                  <hr>
+                  <span>نحوه بسته شدن کفش  </span><span>:بندی</span>
+                  <hr>
+                  <span>ویژگی های زیره </span>:انعطاف پذیری .قابلیت گردش هوا.کاهش فشاروارده<span></span>
+                  <hr>
+                  <span>كشور سازنده </span><span>:آمریکا</span>
+                  <hr>
+                </div>
+
+                <button class="accordion">نظرات کاربران</button>
+                <div class="panel">
+                  <div class="containerss darker">
+                    <img src="./assets/image/pexels2.jpg" alt="Avatar" class="right" style="width:100%;"><span>فاطمه</span>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                    <div>
+                      <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span> 
+                     </div>
+                    <span class="time-left">01:01</span>
+                  </div>
+
+                  <div class="containerss darker">
+                    <img src="./assets/image/pexels1.jpg" alt="Avatar" class="right" style="width:100%;"><span>حسین</span>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                    <div>
+                      <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span> 
+                     </div>
+                    <span class="time-left">11:01</span>
+                  </div>
+
+                  <div class="containerss darker">
+                    <img src="./assets/image/pexels3.jpg" alt="Avatar" class="right" style="width:100%;"><span>علی</span>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                    <div>
+                      <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star "></span>
+                     <span class="fa fa-star "></span>
+                     <span class="fa fa-star"></span> 
+                     </div>
+                    <span class="time-left">12:01</span>
+                  </div>
+
+                  <div class="containerss darker">
+                    <img src="./assets/image/pexels4.jpg" alt="Avatar" class="right" style="width:100%;"><span>مریم</span>
+                    
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                    <div>
+                      <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star "></span>
+                     <span class="fa fa-star "></span>
+                     <span class="fa fa-star "></span>
+                     <span class="fa fa-star"></span> 
+                     </div>
+                    <span class="time-left">22:01</span>
+                  </div>
+                </div>
+
+                <button class="accordion">Section 3</button>
+                <div class="panel">
+                
+                </div>
+                
+              
+          </div>
+              
+
+  </section>    
+
+
+  <footer class="main-footer">
+    <div class="footer container">
+        <div class="footer-item">
+            <h5>دریاره ما </h5>
+            <a href="">درباره ما</a>
+            <a href="">تماس با ما</a>
+            <a href="">نشانی محل  </a>
+            
+            
+        </div>
+        <div class="footer-item">
+            <h5>Get help</h5>
+            <a href="">a</a>
+            <a href="">a</a>
+            <a href="">a </a>
+            <a href="">a</a>
+        </div>
+        <div class="footer-item">
+          <h5>Get help</h5>
+          <a href="">a</a>
+          <a href="">a</a>
+          <a href="">a </a>
+          <a href="">a</a>
+        </div>
+        <div class="footer-item">
+            <img class="footer-logo" src="./assets/image/pngwing.com.png" alt="">
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است 
+             <br> چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+            <ul class="footer-icons">
+                <li class="footer-icon"><img src="./assets/image/instagram.svg" alt=""></li>
+                <li class="footer-icon"><img src="./assets/image/whatsapp.svg" alt=""></li>
+                <li class="footer-icon"><img src="assets/image/telegram.svg" alt=""></li>
+            </ul>
+        </div>
+        
+    </div>
+  </footer>
+  
+
+  
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach((link) =>
+link.addEventListener("click", () => {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+})
+);
+
+
+
+  </script>
+   <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      // captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+  
+    </script> 
+    
+
+
+  
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
+
+      <!-- <script  >
+    var replaceDigits = function() {
+    var map =
+    [
+    "&\#1776;","&\#1777;","&\#1778;","&\#1779;","&\#1780;",
+    "&\#1781;","&\#1782;","&\#1783;","&\#1784;","&\#1785;"
+    ]
+    document.body.innerHTML =
+    document.body.innerHTML.replace(
+    /\d(?=[^<>]*(<|$))/g,
+    function($0) { return map[$0] }
+    );
+    }
+    window.onload = replaceDigits;
+    </script>
+    
+    <script >
+    
+    </script> -->
+ 
+
+  
+  
+
+
+
+    <!-- <script src="./js/glider.min.js" ></script> -->
+    
+<!-- <script type="module" src="./js/sale.js"></script> -->
+<!-- <script type="module" src="./js/product.Data.js"></script> -->
+
+</body>
+</html>

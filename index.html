@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" >
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Fonts.css">
+    <link rel="stylesheet" href="./css/glider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+ </head>
+<body>
+
+  <!-- <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    </div> -->
+ 
+  
+  <nav  >
+    <div class="logo">
+      <img src="./assets/image/pngwing.com.png" alt=""> 
+      
+  </div>
+ 
+    <div class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#" class="nav-link">صفحه اصلی</a></li>
+        <li class="nav-item"><a href="./products.html" class="nav-link">محصولات</a></li>
+        <li class="nav-item"><a href="#" class="nav-link"> ثبت نام </a></li>
+        <li class="nav-item"><a href="./contact-us.html" class="nav-link">تماس با ما</a></li>
+        
+      </ul>
+    </div>
+      <div class="navbar-icon">
+          <ul class="icon-list">
+            <li class="nav-item  submenu"><a href="#" target="_blank"><img src="./assets/image/shopping.svg" alt=""></a>
+              <div id="shopping-cart">
+                <table id="cart-content"  dir="rtl">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <tr>
+                              <td>
+                                <img src="./assets/image/pexels1.jpg" style="width: 100px; height: 100px;" alt="">
+                                <div>
+                                 <img  src="./assets/image/plus.svg" alt="">
+                                  <input type="number" value="1">
+                                  <img src="./assets/image/dash.svg" alt="">
+                                </div>
+
+                              </td>
+                              <td>
+                                <p style="font-size:20px;">Nike Air Jordan-100</p>
+                                <img src="./assets/image/bagcheck.svg" style="width: 17px;height: 17px;margin-left: 1rem;" alt=""><span style="color: rgb(138, 136, 136);">موجود در انبارفروشگاه</span>
+                                <!-- <p style="font-size:15px;text-align: right;">قرمز<span style="background-color: red;width: 15px;height: 15px;border-radius: 1rem;display: inline-block;"></span></p>  -->
+                                <p style="font-size: 2rem;">2,000,000تومان</p>
+                              </td>
+                              <td>
+                                <a  href='#' data-id='${shoesInfo.id}'><img class='remove' src='./assets/image/remove.svg' style="margin-right: 40px;"/></a>
+                              </td>
+                              
+                            </tr>
+                    </tbody>
+                </table>
+
+                  <div style="display: flex;justify-content: space-between;position: relative;bottom: 0;">
+
+                      <p style="font-size: 18px;">مبلغ قابل پرداخت:</p>
+                      <p class="total-price" style="font-size: 18px;"></p>
+                    
+                      <button style="border: none;"><a href="#" id="clear-cart" >پاک کردن</a></button>
+                  </div>
+
+                
+            </div>
+            </li>
+            <li class="nav-item  search">
+              <div class="box">
+                <img class="search-icon" src="./assets/image/search (2).svg" alt="">
+                    <input type="text" class="input" name="txt"placeholder='جستجو...' onmouseout="this.value = ''; this.blur();">
+            </div>            
+            </li>
+
+
+            
+            
+            
+          </ul>
+      </div>
+    <div class="hamburger">
+      
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+   
+  </nav>
+  
+
+
+
+  <section class="container">
+    <div class="slider-shoes"  >
+        <div class="shoes-1">
+            <span class="text-shoes">ONE</span>
+            <div class="shoes">
+                <img src="./assets/image/shoes3.png" alt="">
+            </div>
+        </div>
+
+        <div class="shoes-2">
+            <span class="text-shoes">TWO</span>
+            <div class="shoes">
+                <img src="./assets/image/shoes51.png" alt="">
+            </div>
+        </div>
+
+        <div class="shoes-3">
+            <span class="text-shoes">TREE</span>
+            <div class="shoes">
+                <img src="./assets/image/shoes41.png" alt="">
+            </div>
+        </div>
+    
+
+    <div class="shoes-4">
+      <span class="text-shoes">FOUR</span>
+      <div class="shoes">
+          <img src="./assets/image/shoes51.png" alt="">
+      </div>
+  </div>
+
+  
+
+  </div>
+</section>
+
+ <section class="container">
+  <div class="glider-contain">
+    <h2 class="title-shoese">محصولات <span>محبوب</span></h2>
+      <div class="slider-btns">
+        <button aria-label="Next" class="glider-next"><img src="./assets/image/toright.svg" alt=""></button>
+          <button aria-label="Previous" class="glider-prev"><img src="./assets/image/toleft.svg" alt=""></button>
+      </div>
+
+          <div class="glider one">
+
+                      <div class="shoes">
+                            <div class="imag-shoes">
+                                <img src="./assets/image/shoes51.png" alt="">
+                            </div>
+                            <div  class="star" >
+                              <span class="fa fa-star checked "></span>
+                              <span>(4.5)</span>
+                            </div>
+                            <p class="text-shoese">کفش نایک  مدلAir Jordan-100 </p>
+                            <div class="add">
+                              <span class="price-shoes">20.20$</span>
+                            <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">add to cart</a></button>
+                          </div>
+                    </div>
+
+                    <div class="shoes">
+                      <div class="imag-shoes">
+                          <img src="./assets/image/shoes51.png" alt="">
+                      </div>
+                      <div  class="star" >
+                        <span class="fa fa-star checked "></span>
+                        <span>(4.5)</span>
+                      </div>
+                      <p class="text-shoese">Nike Air Jordan-100</p>
+                      <div class="add">
+                        <span class="price-shoes">20.20$</span>
+                      <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">add to cart</a></button>
+                    </div>
+              </div>
+
+              <div class="shoes">
+                <div class="imag-shoes">
+                    <img src="./assets/image/shoes51.png" alt="">
+                </div>
+                <div  class="star" >
+                  <span class="fa fa-star checked "></span>
+                  <span>(4.5)</span>
+                </div>
+                <p class="text-shoese">Nike Air Jordan-100</p>
+                <div class="add">
+                  <span class="price-shoes">20.20$</span>
+                <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">add to cart</a></button>
+              </div>
+        </div>
+
+                      <div class="shoes">
+                          <div class="imag-shoes">
+                              <img src="./assets/image/shoese2_preview_rev_1.png " alt="">
+                          </div>
+                          <div  class="star" >
+                            <span class="fa fa-star checked "></span>
+                            <span>(4.5)</span>
+                          </div>
+                          <p class="text-shoese">Nike Air Jordan-200</p>
+                          <div class="add">
+                            <span class="price-shoes">20.20$</span>
+                          <button class="button-shose  "> <a href="#"  class='add-to-cart' data-id="1">add to cart</a> </button>
+                        </div>
+                     </div>
+
+                    
+
+                    <div class="shoes">
+                      <div class="imag-shoes">
+                          <img src="./assets/image/shoes41.png " alt="">
+                      </div>
+                      <div  class="star" >
+                        <span class="fa fa-star checked "></span>
+                        <span>(4.5)</span>
+                      </div>
+                      <p class="text-shoese">Nike Air Jordan-300</p>
+                      <div class="add">
+                        <span class="price-shoes">20.20$</span>
+                      <button class="button-shose "><a href="#"  class='add-to-cart' data-id="3">add to cart</a></button>
+                    </div>
+                  </div>
+
+                  <div class="shoes">
+                      <div class="imag-shoes">
+                          <img src="./assets/image/shoese2_preview_rev_1.png " alt="">
+                      </div>
+                      <div  class="star" >
+                        <span class="fa fa-star checked "></span>
+                        <span>(4.5)</span>
+                      </div>
+                      <p class="text-shoese">Nike Air Jordan-100</p>
+                      <div class="add">
+                        <span class="price-shoes">20.20$</span>
+                      <button class="button-shose">add to cart</button>
+                    </div>
+                  </div>
+
+                <div class="shoes">
+                    <div class="imag-shoes">
+                        <img src="./assets/image/shoese2_preview_rev_1.png " alt="">
+                    </div>
+                    <div  class="star" >
+                      <span class="fa fa-star checked "></span>
+                      <span>(4.5)</span>
+                    </div>
+                    <p class="text-shoese">Nike Air Jordan-100</p>
+                    <div class="add">
+                      <span class="price-shoes">20.20$</span>
+                    <button class="button-shose">add to cart</button>
+                  </div>
+                </div>
+
+              <div class="shoes">
+                  <div class="imag-shoes">
+                      <img src="./assets/image/shoese2_preview_rev_1.png " alt="">
+                  </div>
+                  <div  class="star" >
+                    <span class="fa fa-star checked "></span>
+                    <span>(4.5)</span>
+                  </div>
+                  <p class="text-shoese">Nike Air Jordan-100</p>
+                  <div class="add">
+                    <span class="price-shoes">20.20$</span>
+                  <button class="button-shose">add to cart</button>
+                </div>
+              </div>
+
+                 
+          </div>
+  </div>
+</section> 
+  
+<section class="feature container">
+  <div class="feature-image">
+    <div class="feature-alert">
+      <p class="title-alert">تا 30%<br>تخفیف بگیرید</p>
+      <p class="text-alert">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. 
+
+        </p>
+    </div>
+      <img src="./assets/image/shoese2_preview_rev_1.png" alt="">
+  </div>
+  <div class="feature-dtail">
+      <h2 class="feature-title">ما کفش های با کیفت  <span>بالا</span><br>ارائه میدهیم</h2>
+      <p class="feature-text">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+         چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+         و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+      </p>
+      <p class="feature-text">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است 
+        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+      </p>
+      <button class="btn"> <a href="">بیشتر بخوانید</a></button>
+  </div>
+</section>
+  
+
+<section class="feature container">
+      
+  <div class="feature-dtail2">
+    <div>
+       <h2 class="feature-title">بهترین <span> ویژگی</span>&nbsp;در کفش ها </h2>
+    </div>
+   <div >
+     <div class="attribute-shoe">
+       <img src="./assets/image/award-wh.svg" alt="">
+          <div>
+            <h3 class="title-attribute-shoes">بهترین کفش از نظر کیفیت</h3>
+          <p class="text-attribute-shoes">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+             چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+             و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+             کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+              </p>
+            </div>
+          </div>
+          
+          <div class="attribute-shoe">
+          <img src="./assets/image/currency-dollar-wh.svg" alt="">
+          <div>
+            <h3 class="title-attribute-shoes">بهترین کفش از نظر قیمت </h3>
+            <p class="text-attribute-shoes">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم 
+              از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+               و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+            </p>
+          </div>
+        </div>
+
+        <div class="attribute-shoe">
+           <img src="./assets/image/hourglass-bottom-wh.svg" alt="">
+           <div>
+             <h3 class="title-attribute-shoes">بهترین کفش از نظر طول عمر</h3>
+           <p class="text-attribute-shoes">
+             .لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد .
+           </p>
+           </div>
+          </div>
+        </div>
+      </div>
+  <div class="feature-image2">
+     <div class="feature-image-item"><img src="./assets/image/nike’s-best-golf-shoes-for-traction-stability-and-comfort.jpg" alt=""></div>
+     <div class="feature-image-item"><img src="./assets/image/what-to-wear-running-in-different-temperatures.jpg" alt=""></div>
+     <div class="feature-image-item"><img src="./assets/image/l8d2rzni1j8cfwjf8rmn.jpg" alt=""></div>
+  </div>
+      </section>
+
+<!-- <section class="feature container">
+  <div class="feature-image">
+      <img src="./assets/image/shoese2_preview_rev_1.png" alt="">
+      <img src="./assets/image/shoese2_preview_rev_1.png" alt="">
+      <img src="./assets/image/shoese2_preview_rev_1.png" alt="">
+  </div>
+  <div class="feature-dtail">
+    <div>
+       <h2 class="feature-title">Get to Know Our<br>Feature <span>Product</span> </h2>
+      <p class="feature-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+           Assumenda iste eius consequatur perspiciatis earum laborum 
+           nesciunt voluptatem maiores impedit sint.
+      </p>
+    </div>
+     
+      <div>
+        <div class="attribute-shoe">
+          <img src="./assets/image/icons8-mail-30.png" alt="">
+          <div>
+            <p>Best Qualiti Shoes</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, fugit.
+          </p>
+          </div>
+        </div>
+
+        <div class="attribute-shoe">
+          <img src="./assets/image/icons8-map-32.png" alt="">
+          <div>
+            <p>Best Giving Priking</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, fugit.
+          </p>
+          </div>
+        </div>
+
+  </div>
+  
+  
+</section> -->
+
+   <section class="comments">
+    <div class="glider-contain container">
+      <h2 class="title-shoese">کاربران در مورد <br> <span>  اجناس ما </span> چه میگویند</h2>
+        <div class="slider-btns">
+            <button aria-label="Previous" class="glider-prev2"><img src="./assets/image/toright.svg" alt=""></button>
+            <button aria-label="Next" class="glider-next2"><img src="./assets/image/toleft.svg" alt=""></button>
+        </div>
+        <div class="glider two">
+            
+                    <div class="customer-client">
+                        <img class="customer-imag" src="./assets/image/pexels1.jpg" alt="">
+                        <p class="customer-text">
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                            </p>
+
+                            <div>
+                             <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> 
+                            </div>
+                  
+                        <p class="customer-name">محمد </p>
+                    </div>
+
+                    <div class="customer-client">
+                      <img class="customer-imag" src="./assets/image/pexels2.jpg" alt="">
+                      <p class="customer-text">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                          </p>
+
+                          <div>
+                           <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span> 
+                          </div>
+                
+                      <p class="customer-name">فاطمه </p>
+                  </div>
+
+                  <div class="customer-client">
+                    <img class="customer-imag" src="./assets/image/pexels3.jpg" alt="">
+                    <p class="customer-text">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                        </p>
+
+                        <div>
+                         <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> 
+                        </div>
+              
+                    <p class="customer-name">مهدی </p>
+                </div>
+
+                <div class="customer-client">
+                  <img class="customer-imag" src="./assets/image/pexels4.jpg" alt="">
+                  <p class="customer-text">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                      </p>
+
+                      <div>
+                       <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span> 
+                      </div>
+            
+                  <p class="customer-name">مریم </p>
+              </div>
+
+              <div class="customer-client">
+                <img class="customer-imag" src="./assets/image/pexels1.jpg" alt="">
+                <p class="customer-text">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                    </p>
+
+                    <div>
+                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span> 
+                    </div>
+          
+                <p class="customer-name">صادق </p>
+            </div>
+
+            <div class="customer-client">
+              <img class="customer-imag" src="./assets/image/pexels2.jpg" alt="">
+              <p class="customer-text">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                  </p>
+
+                  <div>
+                   <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span> 
+                  </div>
+        
+              <p class="customer-name">زهرا </p>
+          </div>
+        </div>
+      </div>
+</section> 
+
+<section class="container">
+  <div class="login">
+    <h2>  برای دریافت جدید ترین  <span>اخبار</span><br>  در سایت ثبت نام کنید </h2>
+    <form action="" class="login-form">
+      <input type="email" placeholder="ایمیل">
+      <button class="btn">ارسال</button>
+    </form>
+  </div>
+</section>
+
+
+
+<footer class="main-footer">
+  <div class="footer container">
+      <div class="footer-item">
+          <h5 class="footer-title">دریاره ما </h5>
+          <a class="fooer-link" href="">درباره ما</a>
+          <a class="fooer-link" href="">تماس با ما</a>
+          <a class="fooer-link" href="">نشانی محل  </a>
+          
+          
+      </div>
+      <div class="footer-item">
+          <h5 class="footer-title">Get help</h5>
+          <a class="fooer-link" href="">a</a>
+          <a class="fooer-link" href="">a</a>
+          <a class="fooer-link" href="">a </a>
+          <a class="fooer-link" href="">a</a>
+      </div>
+      <div class="footer-item">
+        <h5 class="footer-title">Get help</h5>
+        <a class="fooer-link" href="">a</a>
+        <a class="fooer-link" href="">a</a>
+        <a class="fooer-link" href="">a </a>
+        <a class="fooer-link" href="">a</a>
+      </div>
+      <div class="footer-item">
+          <img class="footer-logo" src="./assets/image/pngwing.com.png" alt="">
+          <p class="footer-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است 
+           <br> چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+          <ul class="footer-icons">
+              <li class="footer-icon"><img src="./assets/image/instagram.svg" alt=""></li>
+              <li class="footer-icon"><img src="./assets/image/whatsapp.svg" alt=""></li>
+              <li class="footer-icon"><img src="assets/image/telegram.svg" alt=""></li>
+          </ul>
+      </div>
+      
+  </div>
+</footer>
+   
+<script src="./js/glider.min.js" ></script>
+<script src="./js/main.js"></script>
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> -->
+  <script>
+//     let inputBox = document.querySelector('.input-box'),
+//   searchIcon = document.querySelector('.search'),
+//   closeIcon = document.querySelector('.close-icon');
+
+// // ---- ---- Open Input ---- ---- //
+// searchIcon.addEventListener('click', () => {
+//   inputBox.classList.add('open');
+// });
+// // ---- ---- Close Input ---- ---- //
+// closeIcon.addEventListener('click', () => {
+//   inputBox.classList.remove('open');
+// });
+  </script>
+
+
+</body>
+</html> 
+ 

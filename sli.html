@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Document</title>
+   
+  </head>
+  <body>
+    <!-- <section class="feature container">
+      
+      <div class="feature-dtail2">
+        <div>
+           <h2 class="feature-title">Get to Know Our<br>Feature <span>Product</span> </h2>
+        </div>
+       <div >
+         <div class="attribute-shoe">
+           <img src="./assets/image/award-wh.svg" alt="">
+              <div>
+                <h3 class="title-attribute-shoes">Best Qualiti Shoes</h3>
+              <p class="text-attribute-shoes">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Labore officiis quae eligendi accusamus blanditiis
+                   repudiandae numquam a earum! Cum, odit.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="attribute-shoe">
+              <img src="./assets/image/currency-dollar-wh.svg" alt="">
+              <div>
+                <h3 class="title-attribute-shoes">Best Qualiti Price </h3>
+                <p class="text-attribute-shoes">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Labore officiis quae eligendi accusamus blanditiis
+                  repudiandae numquam a earum! Cum, odit.
+                </p>
+              </div>
+            </div>
+
+            <div class="attribute-shoe">
+               <img src="./assets/image/hourglass-bottom-wh.svg" alt="">
+               <div>
+                 <h3 class="title-attribute-shoes">Long Lasting Shoes</h3>
+               <p class="text-attribute-shoes">
+                 .لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد .
+               </p>
+               </div>
+              </div>
+            </div>
+          </div>
+      <div class="feature-image2">
+         <div class="feature-image-item"><img src="./assets/image/nike’s-best-golf-shoes-for-traction-stability-and-comfort.jpg" alt=""></div>
+         <div class="feature-image-item"><img src="./assets/image/what-to-wear-running-in-different-temperatures.jpg" alt=""></div>
+         <div class="feature-image-item"><img src="./assets/image/l8d2rzni1j8cfwjf8rmn.jpg" alt=""></div>
+      </div>
+          </section> -->
+
+          <!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Google Maps</title>
+    <style type="text/css">
+      #map-canvas{
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+      }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript">
+       function initialize() {
+         var myLatlng = new google.maps.LatLng(29.935711, 52.887702);
+         var mapOptions = {
+           zoom: 15,
+           center: myLatlng,
+           mapTypeId: google.maps.MapTypeId.ROADMAP
+         }
+          
+         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+          
+         var contentString = '<div style="direction: rtl; text-align: right;font-family: Tahoma;">' +
+                                     '<h4>Marvdasht , Takhte Jamshid</h4>' +
+                                      '<h5>Takhte Jamshid</h5>' +
+                                      '</div>';
+          
+         var infowindow = new google.maps.InfoWindow({
+           content: contentString
+         });
+          
+         var marker = new google.maps.Marker({
+           position: myLatlng,
+           map: map,
+           title: 'Takhte Jamshid'
+         });
+          
+         infowindow.open(map, marker);
+         google.maps.event.addListener(marker, 'click', function() {
+           infowindow.open(map, marker);
+         });
+       }
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="map-canvas"></div>
+</body>
+</html>
+          
+          
+</body>
+</html>
