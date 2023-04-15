@@ -9,22 +9,11 @@
     <link rel="stylesheet" href="./css/Fonts.css">
     <link rel="stylesheet" href="./css/glider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
  </head>
 <body>
 
-  <!-- <div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    </div> -->
+ 
  
   
   <nav  >
@@ -56,45 +45,35 @@
                     </thead>
                     <tbody>
                           <tr>
-                              <td>
-                                <img src="./assets/image/pexels1.jpg" style="width: 100px; height: 100px;" alt="">
-                                <div>
-                                 <img  src="./assets/image/plus.svg" alt="">
-                                  <input type="number" value="1">
-                                  <img src="./assets/image/dash.svg" alt="">
-                                </div>
-
-                              </td>
-                              <td>
-                                <p style="font-size:20px;">Nike Air Jordan-100</p>
-                                <img src="./assets/image/bagcheck.svg" style="width: 17px;height: 17px;margin-left: 1rem;" alt=""><span style="color: rgb(138, 136, 136);">موجود در انبارفروشگاه</span>
-                                <!-- <p style="font-size:15px;text-align: right;">قرمز<span style="background-color: red;width: 15px;height: 15px;border-radius: 1rem;display: inline-block;"></span></p>  -->
-                                <p style="font-size: 2rem;">2,000,000تومان</p>
-                              </td>
-                              <td>
-                                <a  href='#' data-id='${shoesInfo.id}'><img class='remove' src='./assets/image/remove.svg' style="margin-right: 40px;"/></a>
-                              </td>
+                             
                               
                             </tr>
                     </tbody>
                 </table>
 
-                  <div style="display: flex;justify-content: space-between;position: relative;bottom: 0;">
+                  <!-- <div style="display: flex;justify-content: space-between;position: relative;bottom: 0;"> -->
 
-                      <p style="font-size: 18px;">مبلغ قابل پرداخت:</p>
-                      <p class="total-price" style="font-size: 18px;"></p>
+                      
+                      
                     
-                      <button style="border: none;"><a href="#" id="clear-cart" >پاک کردن</a></button>
-                  </div>
+                      <a href="#" id="clear-cart" >پاک کردن</a>
+                  <!-- </div> -->
 
                 
             </div>
             </li>
+           
             <li class="nav-item  search">
-              <div class="box">
-                <img class="search-icon" src="./assets/image/search (2).svg" alt="">
-                    <input type="text" class="input" name="txt"placeholder='جستجو...' onmouseout="this.value = ''; this.blur();">
-            </div>            
+              <div id="search" class="fade">
+                <a href="#" class="close-btn" >
+                    <img src="./assets/image/x-whaite.svg" alt="">
+                </a>
+                <input placeholder="type here" id="searchbox" type="search"/>
+                <div class="search-box" ></div>
+            </div>
+                 <a href='#search'>
+                    <img src="./assets/image/search (2).svg"  alt="">
+                </a>
             </li>
 
 
@@ -116,7 +95,7 @@
 
 
   <section class="container">
-    <div class="slider-shoes"  >
+    <div data-aos="flip-left" class="slider-shoes"  >
         <div class="shoes-1">
             <span class="text-shoes">ONE</span>
             <div class="shoes">
@@ -152,14 +131,14 @@
 </section>
 
  <section class="container">
-  <div class="glider-contain">
+  <div  class="glider-contain">
     <h2 class="title-shoese">محصولات <span>محبوب</span></h2>
       <div class="slider-btns">
         <button aria-label="Next" class="glider-next"><img src="./assets/image/toright.svg" alt=""></button>
           <button aria-label="Previous" class="glider-prev"><img src="./assets/image/toleft.svg" alt=""></button>
       </div>
 
-          <div class="glider one">
+          <div data-aos="zoom-out" class="glider one">
 
                       <div class="shoes">
                             <div class="imag-shoes">
@@ -171,8 +150,8 @@
                             </div>
                             <p class="text-shoese">کفش نایک  مدلAir Jordan-100 </p>
                             <div class="add">
-                              <span class="price-shoes">20.20$</span>
-                            <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">add to cart</a></button>
+                              <span class="price-shoes">20.20تومان</span>
+                            <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">اضافه کردن به سبد خرید</a></button>
                           </div>
                     </div>
 
@@ -186,8 +165,8 @@
                       </div>
                       <p class="text-shoese">Nike Air Jordan-100</p>
                       <div class="add">
-                        <span class="price-shoes">20.20$</span>
-                      <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">add to cart</a></button>
+                        <span class="price-shoes">20.20تومان</span>
+                      <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">اضافه کردن به سبد خرید </a></button>
                     </div>
               </div>
 
@@ -201,8 +180,8 @@
                 </div>
                 <p class="text-shoese">Nike Air Jordan-100</p>
                 <div class="add">
-                  <span class="price-shoes">20.20$</span>
-                <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">add to cart</a></button>
+                  <span class="price-shoes">20.20تومان</span>
+                <button class="button-shose " ><a href="#" class='add-to-cart' data-id="2">اضافه کردن به سبد خرید </a></button>
               </div>
         </div>
 
@@ -216,8 +195,8 @@
                           </div>
                           <p class="text-shoese">Nike Air Jordan-200</p>
                           <div class="add">
-                            <span class="price-shoes">20.20$</span>
-                          <button class="button-shose  "> <a href="#"  class='add-to-cart' data-id="1">add to cart</a> </button>
+                            <span class="price-shoes">20.20تومان</span>
+                          <button class="button-shose  "> <a href="#"  class='add-to-cart' data-id="1">اضافه کردن به سبد خرید</a> </button>
                         </div>
                      </div>
 
@@ -233,8 +212,8 @@
                       </div>
                       <p class="text-shoese">Nike Air Jordan-300</p>
                       <div class="add">
-                        <span class="price-shoes">20.20$</span>
-                      <button class="button-shose "><a href="#"  class='add-to-cart' data-id="3">add to cart</a></button>
+                        <span class="price-shoes">20.20تومان </span>
+                      <button class="button-shose "><a href="#"  class='add-to-cart' data-id="3">اضافه کردن به سبد خرید</a></button>
                     </div>
                   </div>
 
@@ -289,7 +268,8 @@
 </section> 
   
 <section class="feature container">
-  <div class="feature-image">
+  <div data-aos="fade-left data-aos-offset="300"
+  data-aos-easing="ease-in-sine" class="feature-image">
     <div class="feature-alert">
       <p class="title-alert">تا 30%<br>تخفیف بگیرید</p>
       <p class="text-alert">
@@ -299,7 +279,7 @@
     </div>
       <img src="./assets/image/shoese2_preview_rev_1.png" alt="">
   </div>
-  <div class="feature-dtail">
+  <div data-aos="fade-right" class="feature-dtail">
       <h2 class="feature-title">ما کفش های با کیفت  <span>بالا</span><br>ارائه میدهیم</h2>
       <p class="feature-text">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -317,7 +297,7 @@
 
 <section class="feature container">
       
-  <div class="feature-dtail2">
+  <div  data-aos="fade-left" class="feature-dtail2">
     <div>
        <h2 class="feature-title">بهترین <span> ویژگی</span>&nbsp;در کفش ها </h2>
     </div>
@@ -358,7 +338,7 @@
           </div>
         </div>
       </div>
-  <div class="feature-image2">
+  <div data-aos="fade-right" class="feature-image2">
      <div class="feature-image-item"><img src="./assets/image/nike’s-best-golf-shoes-for-traction-stability-and-comfort.jpg" alt=""></div>
      <div class="feature-image-item"><img src="./assets/image/what-to-wear-running-in-different-temperatures.jpg" alt=""></div>
      <div class="feature-image-item"><img src="./assets/image/l8d2rzni1j8cfwjf8rmn.jpg" alt=""></div>
@@ -408,7 +388,7 @@
 </section> -->
 
    <section class="comments">
-    <div class="glider-contain container">
+    <div data-aos="zoom-in" class="glider-contain container">
       <h2 class="title-shoese">کاربران در مورد <br> <span>  اجناس ما </span> چه میگویند</h2>
         <div class="slider-btns">
             <button aria-label="Previous" class="glider-prev2"><img src="./assets/image/toright.svg" alt=""></button>
@@ -544,18 +524,16 @@
           
       </div>
       <div class="footer-item">
-          <h5 class="footer-title">Get help</h5>
-          <a class="fooer-link" href="">a</a>
-          <a class="fooer-link" href="">a</a>
-          <a class="fooer-link" href="">a </a>
-          <a class="fooer-link" href="">a</a>
+        <h5 class="footer-title">دریاره ما </h5>
+        <a class="fooer-link" href="">درباره ما</a>
+        <a class="fooer-link" href="">تماس با ما</a>
+        <a class="fooer-link" href="">نشانی محل  </a>
       </div>
       <div class="footer-item">
-        <h5 class="footer-title">Get help</h5>
-        <a class="fooer-link" href="">a</a>
-        <a class="fooer-link" href="">a</a>
-        <a class="fooer-link" href="">a </a>
-        <a class="fooer-link" href="">a</a>
+        <h5 class="footer-title">دریاره ما </h5>
+        <a class="fooer-link" href="">درباره ما</a>
+        <a class="fooer-link" href="">تماس با ما</a>
+        <a class="fooer-link" href="">نشانی محل  </a>
       </div>
       <div class="footer-item">
           <img class="footer-logo" src="./assets/image/pngwing.com.png" alt="">
@@ -570,27 +548,16 @@
       
   </div>
 </footer>
-   
+  
 <script src="./js/glider.min.js" ></script>
 <script src="./js/main.js"></script>
-<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script> -->
-  <script>
-//     let inputBox = document.querySelector('.input-box'),
-//   searchIcon = document.querySelector('.search'),
-//   closeIcon = document.querySelector('.close-icon');
+  </script> 
+  
 
-// // ---- ---- Open Input ---- ---- //
-// searchIcon.addEventListener('click', () => {
-//   inputBox.classList.add('open');
-// });
-// // ---- ---- Close Input ---- ---- //
-// closeIcon.addEventListener('click', () => {
-//   inputBox.classList.remove('open');
-// });
-  </script>
 
 
 </body>

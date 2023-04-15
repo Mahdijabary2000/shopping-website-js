@@ -1,82 +1,3 @@
-// import { productsData } from "./image-product";
-// /* silider mahsolat*/
-// const slidesContainer = document.querySelector(".slides-container");
-// const slides = document.querySelectorAll(".slide");
-// const nextBtn = document.querySelector("#nextBtn");
-// const prevBtn = document.querySelector("#prevBtn");
-// const items = document.querySelectorAll(".item");
-
-// const slideWidth = slides[0].clientWidth;
-// let index = 0;
-
-// slidesContainer.insertAdjacentHTML(
-//   "afterbegin",
-//   slides[slides.length - 1].outerHTML
-// );
-// slidesContainer.insertAdjacentHTML("beforeend", slides[0].outerHTML);
-
-// slidesContainer.style.transform = `translateX(${-slideWidth}px)`;
-
-// nextBtn.addEventListener("click", () => {
-//   slidesContainer.style.transition = "all 0.3s ease-in-out";
-  
-//   index++;
-//   slidesContainer.style.transform = `translateX(${
-//     -slideWidth * (index + 1)
-//   }px)`;
-
-//   items.forEach((item) => item.classList.remove("active"));
-
-//   if (index > slides.length - 1) {
-//     setTimeout(() => {
-//       index = 0;
-//       slidesContainer.style.transform = `translateX(${-slideWidth}px)`;
-//       items[index].classList.add("active");
-//       slidesContainer.style.transition = "none";
-//     }, 300);
-//   } else {
-//     items[index].classList.add("active");
-//   }
-// });
-
-// prevBtn.addEventListener("click", () => {
-//   slidesContainer.style.transition = "all 0.3s ease-in-out";
-
-//   index--;
-//   slidesContainer.style.transform = `translateX(${
-//     -slideWidth * (index + 1)
-//   }px)`;
-
-//   items.forEach((item) => item.classList.remove("active"));
-
-//   if (index < 0) {
-//     setTimeout(() => {
-//       index = slides.length - 1;
-//       slidesContainer.style.transform = `translateX(${
-//         -slideWidth * (index + 1)
-//       }px)`;
-//       items[index].classList.add("active");
-//       slidesContainer.style.transition = "none";
-//     }, 300);
-//   } else {
-//     items[index].classList.add("active");
-//   }
-// });
-
-// items.forEach((item, i) => {
-//   slidesContainer.style.transition = "all 0.3s ease-in-out";
-
-//   item.addEventListener("click", () => {
-//     items.forEach((item) => item.classList.remove("active"));
-//     index = i;
-//     item.classList.add("active");
-//   slidesContainer.style.transition = "all 0.3s ease-in-out";
-
-//     slidesContainer.style.transform = `translateX(${
-//       -slideWidth * (index + 1)
-//     }px)`;
-//   });
-// });
 
 new Glider(document.querySelector('.one'), {
     slidesToScroll: 1,
@@ -134,14 +55,21 @@ navMenu.classList.remove("active");
 const shoess=document.querySelector('.one'),
 shopping=document.querySelector('#cart-content tbody'),
 clearCart=document.querySelector('#clear-cart'),
-totalprice=document.querySelector('.total-price').textContent
-let cart = [];
+number_product=document.querySelector('#number-product')
+const mainez_icon=document.querySelector('.mainez')
+
+const plus_icon=document.querySelector('.pluse')
+const totalprice=document.querySelector('.total-price')
 
 
 
 
 
+//
+ 
 
+
+ let conter=0
 
 //eventlistener
 eventlisteners()
@@ -149,12 +77,30 @@ function eventlisteners(){
   shoess.addEventListener('click',buyshoes)
   shopping.addEventListener('click',removeCart)
   clearCart.addEventListener('click',removeAll)
+  document.addEventListener('DOMContentLoaded', showCoursesOnLoad)
+  // plus_icon.addEventListener('click',plus)
+  // mainez_icon.addEventListener('click',mainez)
 }
 
 
 
 
 //function
+
+function plus(){
+ let x= number_product.textContent=++conter
+ return x
+
+}
+function mainez(){
+  let y= number_product.textContent=--conter
+  return y;
+ 
+ }
+ 
+  
+
+
 
 
 function buyshoes(e){
@@ -186,19 +132,14 @@ function addtocart(shoesInfo){
         <td>
             <img src=${shoesInfo.image} style="width: 110px; height: 80px;" />
           
-            <div>
-                 <img class='pluse-Item' src="./assets/image/plus.svg" alt="">
-                 <p class='number'>1</p>
-                 
-                 <img src="./assets/image/dash.svg" alt="">
-            </div>
+            
         </td>
 
         <td>
             <p style="font-size:16px;">${shoesInfo.title}</p>
             <img src="./assets/image/bagcheck.svg" style="width: 17px;height: 17px;margin-left: 1rem;" alt="">
-            <span style="color: rgb(138, 136, 136);">موجود در انبارفروشگاه</span>
-            <p style="font-size: 2rem;">${shoesInfo.price}</p>
+            <span style="color:#fff;">موجود در انبارفروشگاه</span>
+            <p style="font-size: 1.5rem;">${shoesInfo.price}</p>
         </td>
         <td>
                 <a  href='#' data-id='${shoesInfo.id}'><img class='remove' src='./assets/image/remove.svg'style="margin-right: 40px;"/></a> 
@@ -208,52 +149,108 @@ function addtocart(shoesInfo){
 
   `
   shopping.appendChild(row)
+
+  saveToStorage(shoesInfo)
   
 
   
-  console.log(totalprice);
   // addtoLocalstoreage(shoesInfo)
   
 }
 
+
+function saveToStorage(course){
+  // get array of courses from storage
+  let courses = getFromStorage()
+
+  // add the new course to the array of courses
+  courses.push(course)
+
+  localStorage.setItem('courses', JSON.stringify(courses) )
+
+}
+
+function getFromStorage(){
+  let courses;
+
+  // if courses exist before
+  if (localStorage.getItem('courses')) {
+      courses = JSON.parse(localStorage.getItem('courses'))
+  } else {
+      courses = []
+  }
+
+  return courses
+}
+
+
 function removeCart(e){
+  let course , courseId;
   if(e.target.classList.contains('remove')){
    e.target.parentElement.parentElement.parentElement.remove()
   }
-  
+  course =  e.target.parentElement.parentElement
+  courseId = course.querySelector('a').getAttribute('data-id')
+  console.log(course);
+  removeCourseLS(courseId)
+}
+function removeCourseLS(id){
+  let coursesLS = getFromStorage()
+
+  coursesLS.forEach(function(course , index){
+      if(course.id === id){
+          coursesLS.splice(index , 1)
+      }
+  });
+
+  localStorage.setItem('courses', JSON.stringify(coursesLS))
 }
 
 function removeAll(e){
   while(shopping.firstChild){
     shopping.firstChild.remove() 
+    
 }
+clearCartLS()
 }
-
-function getLocalstorage(){
-  let shoes;
-  if(localStorage.getItem('shoeses')){
-    shoes=JSON.parse(localStorage.getItem('shoeses'))
-  }
-  else{
-    shoes-[]
-  }
-  return shoes
+function clearCartLS(){
+  localStorage.clear()
 }
+function showCoursesOnLoad(){
+  let coursesLS = getFromStorage();
 
-
-// function addtoLocalstoreage(shoesInfo){
-//   let shoes1=getLocalstorage()
-//   shoes1.push(shoesInfo)
-//   localStorage.setItem('shoeses',JSON.stringify(shoes1))
-// }
-
-//---------------//
-
-
-
-
-
-
-
-
+  // add courses into the cart
+  coursesLS.forEach(function(shoesInfo) {
+    let row=document.createElement('tr')
+    row.innerHTML=
+    `
+      <tr>
+          <td>
+              <img src=${shoesInfo.image} style="width: 110px; height: 80px;" />
+            
+              <div>
+              <button class="pluse"><img  src="./assets/image/plus.svg" alt=""></button>    
+                 <p id="number-product">1</p>
+              <button class="mainez"><img src="./assets/image/dash.svg" alt=""></button>
+              </div>
+          </td>
+  
+          <td>
+              <p style="font-size:16px;">${shoesInfo.title}</p>
+              <img src="./assets/image/bagcheck.svg" style="width: 17px;height: 17px;margin-left: 1rem;" alt="">
+              <span style="color: rgb(138, 136, 136);">موجود در انبارفروشگاه</span>
+              <p style="font-size: 2rem;">${shoesInfo.price}</p>
+          </td>
+          <td>
+                  <a  href='#' data-id='${shoesInfo.id}'><img class='remove' src='./assets/image/remove.svg'style="margin-right: 40px;"/></a> 
+          </td>
+  
+      </tr>
+  
+    `
+    shopping.appendChild(row)
+     
+  });
+  
+}
 

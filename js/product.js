@@ -1,27 +1,41 @@
 import { productsData } from "../js/product.Data.js";
 
-const products=document.querySelector('.product')
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach((link) =>
+link.addEventListener("click", () => {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+})
+);
+const products = document.querySelector('.product')
 
 
 eventlisteners()
-function eventlisteners(){
-    products.addEventListener('click',froshItem)
+function eventlisteners() {
+  products.addEventListener('click', froshItem)
 }
 
-export function froshItem(e){
-    e.preventDefault()
-    if(e.target.classList.contains('image-product')){
-       const informations=e.target;
-       const shoesId=informations.getAttribute('data-id')
-       console.log(shoesId);
-    return(shoesId)
-    } 
-     
+export function froshItem(e) {
+  e.preventDefault()
+  if (e.target.classList.contains('image-product')) {
+    const informations = e.target;
+    const shoesId = informations.getAttribute('data-id')
+    console.log(shoesId);
+    return (shoesId)
+  }
+
 }
 //   function getInformation(informations){
-   
-    
-    
+
+
+
 // }
 
 
@@ -63,7 +77,7 @@ export function froshItem(e){
 //search
 const searchInput = document.querySelector("#searchbox");
 const productsDOM = document.querySelector(".product");
-const searchBox=document.querySelector('.search-box')
+const searchBox = document.querySelector('.search-box')
 
 
 let allProductsdata = [];
@@ -78,39 +92,64 @@ function getProductaData() {
 
 document.addEventListener("DOMContentLoaded", () => {
   allProductsdata = getProductaData();
-  renderProducts(allProductsdata, filters,productsDOM);
+  renderProducts(allProductsdata, filters, productsDOM);
 });
 
-function renderProducts(_products, _filters,container) {
+function renderProducts(_products, _filters, container) {
   const filteredProducts = _products.filter((p) => {
     return p.title.toLowerCase().includes(_filters.searchItems.toLowerCase());
   });
-  
+
   container.innerHTML = "";
   // render to DOM
   filteredProducts.forEach((item, index) => {
-      const productsDiv = document.createElement("div");
-          productsDiv.classList.add("product-item");
-          productsDiv.innerHTML = `
-          <a><img class="image-product" data-id=${item.id} src=${item.imageUrl} alt=""></a>
+    const productsDiv = document.createElement("div");
+    productsDiv.classList.add("product-item");
+    productsDiv.innerHTML = `
+          <a href="./fros.html"><img class="image-product" data-id=${item.id} src=${item.imageUrl} alt=""></a>
           <p class="text-product">${item.title}</p>
           <span class="price-product">${item.price}</span>
-          <button class="button-product" data-id=${item.id}><a href="./frosh.html" > add to cart </a>  </button>
+          <button class="button-product" data-id=${item.id}><a href="#" > اضافه کردن به سبد خرید </a>  </button>
           `
     // append to DOM
-    
+
     container.appendChild(productsDiv);
-    
-    
+
+
     console.log(productsDiv);
   });
 }
 
 // searchBox.innerHTML=`${}`;
 searchInput.addEventListener("input", (e) => {
-  // console.log(e.target.value);
-  filters.searchItems = e.target.value;
-  renderProducts(allProductsdata, filters,searchBox);
+  searchBox.innerHTML = "";
+  const filteredProducts = allProductsdata.filter((p) => {
+    return p.title.toLowerCase().includes(e.target.value.toLowerCase());
+  });
+  //  searchBox.innerHTML = "";
+  // filters.searchItems = e.target.value;
+  if (filteredProducts.length === allProductsdata.length) return;
+
+  if (filteredProducts.length === 0) {
+    searchBox.innerHTML = "<p>موردی یافت نشد<p>";
+  }
+  filteredProducts.forEach((item, index) => {
+    const productsDiv = document.createElement("div");
+    productsDiv.classList.add("product-item");
+    productsDiv.innerHTML = `
+          <a ><img class="image-product" data-id=${item.id} src=${item.imageUrl} alt=""></a>
+          <p class="text-product">${item.title}</p>
+          <span class="price-product">${item.price}</span>
+          <button class="button-product" data-id=${item.id}><a  > add to cart </a>  </button>
+          `
+    // append to DOM
+
+    searchBox.appendChild(productsDiv);
+
+
+    console.log(productsDiv);
+  });
+
 });
 
 

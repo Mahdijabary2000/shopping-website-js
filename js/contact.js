@@ -1,5 +1,5 @@
 function initialize() {
-    var myLatlng = new google.maps.LatLng(34.555426, 50.803653);
+    var myLatlng = new google.maps.LatLng(32.66703444294909, 51.6888143746426);
     var mapOptions = {
       zoom: 15,
       center: myLatlng,
@@ -28,3 +28,17 @@ function initialize() {
       infowindow.open(map, marker);
     });
   }
+  const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach((link) =>
+link.addEventListener("click", () => {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+})
+);
